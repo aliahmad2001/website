@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+  <head>
+    <title>Reading Comprehension Test</title>
+    <style>
+      .correct-answer::after {
+        content: "\2713";
+        color: green;
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Reading Comprehension Test</h1>
+    <p>Read the following paragraph and answer the multiple-choice question below:</p>
+    <p><strong>Paragraph:</strong>
+فِيقَدِيمِالزَّمَانِ،عَاشَمَلِكٌعَادِلٌ.اَرَادَالْمَلِكُاَنْيَحْصُلَالنَّاسُعَلَىكُلِّالْحُقُوقِ.فَكَّرَالْمَلِكُفِيطَرِيقَةٍ.وَبَعْدَ
+مُدَّةٍ،اِشْتَرَىالْمَلِكُنَاقُوسًاكَبِيرًا.عَلَّقَالْمَلِكُالنَّاقُوسَفِيسُوقِالْمَدِينَةِ.عَلَّقَالْمَلِكُحَبْلًافِيالنَّاقُوسِ.سَمَّى
+.جَمَعَالْمَلِكُالنَّاسَ.قَالَالْمَلِكُ:لَقَدْعَلَّقْتُهَذَالانَّاقُوسَ؛كَيْيَحْصُلَالنَّاسُ «نَاقُوسَالْعَدَالَةِ » الْمَلِكُالنَّاقُوسَ
+عَلَىكُلِّالْحُقُوقِ.سَوْفَيَدُقُّالشَّخْصُالْمَظْلُومُهَذَالانَّاقُوسَ.سَوْفَيَسْمَعُالْقُضَاةُصَوْتَالنَّاقُوسِ.سَوْفَ
+يَجْتَمِــعُالْقُضَاةُ.سَوْفَيَبْحَثُالْقُضَاةُفِيمُشْكِلَةِالشَّخْصِالْمَظْلُومِ.سَوْفَيُعْطِيَالْقُضَاةُالْحَقَّلِلْمَظْلُومِ.وَبِسَبَبِ
+هَذَالانَّاقُوسِ،اِنْتَشَرَالْعَدْلُ.كَانَالْمَظْلُومُونَيَسْحَبُونَالْحَبْلَ.كَانَالنَّاقُوسُيُصْدِرُصَوْتًا.كَانَالْقُضَاةُيَجْتَمِعُونَ.
+كَانَالْقُضَاةُيَحِلُّونَالْمَشَاكِلَ.وَبَعْدَمُدَّةٍ،اِنْقَطَعَالْحَبْلُ.لَمْيَسْتَطِــعِالْاَشْخَاصُالْقِصَارُاَنْيَسْحَبُوالاْحَبْلَ.رَاَى
+الْمَلِكُالْحَبْلَالْقَصِيرَ.غَضِبَالْمَلِكُ.قَالَالْمَلِكُلِلْقُضَاةِ:هَلْرَاَيْتُمهَذَالاْحَبْلَالْقَصِيرَ؟قَالَالْقُضَاةُ:نَعَميَا
+مَولَاي.سَاَلَالْمَلِكُ:وَلِمَاذَالَمْيُعَلِّقْاَحَدٌحَبْلًاطَوِيلًا؟لَنْيَصِلَالْاَطْفَالُالْمَظْلُومُونَإِلَىالْحَبْل</p>
+    <form>
+      <p><strong>Question:</strong>عَكْسُ كَلِمَةِ (عَادِل) ......................</p>
+      <label><input type="radio" name="answer" value="a"> ضَعِيف.</label><br>
+      <label><input type="radio" name="answer" value="b"> قَوِي</label><br>
+      <label><input type="radio" name="answer" value="c"> ظَالِم</label><br>
+
+      <br>
+
+    </form>
+    <script>
+      const form = document.querySelector('form');
+      const correctAnswer = 'c';
+      const labels = form.querySelectorAll('label');
+      labels.forEach(label => {
+        const input = label.querySelector('input');
+        input.addEventListener('change', (event) => {
+          const selectedAnswer = event.target.value;
+          if (selectedAnswer === correctAnswer) {
+            label.classList.add('correct-answer');
+          } else {
+            label.classList.remove('correct-answer');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

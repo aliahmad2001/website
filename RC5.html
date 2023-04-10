@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+  <head>
+    <title>Reading Comprehension Test</title>
+    <style>
+      .correct-answer::after {
+        content: "\2713";
+        color: green;
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Reading Comprehension Test</h1>
+    <p>Read the following paragraph and answer the multiple-choice question below:</p>
+    <p><strong>Paragraph:</strong>قَالَكَبِيرُالْقُضَاةِلِرَئِيسِالشُّرْطَةِ:اِذْهَبِالْآنَإِلَىالْقَرْيَةِ.اَحْضِرِالشَّيْخَالْبَخِيلَإِلَىهُنَا.ذَهَبَالْعَسَاكِرُإِلَى
+بَيْتِالشَّيْخِالْبَخِيلِ.اَحْضَرَالْعَسَاكِرُالشَّيْخَ.قَالَكَبِيرُالْقُضَاةِ:هَلْهَذَالاْحِصَانُالْعَجُوزُحِصَانُكَ؟اَجَابَ
+الشَّيْخُالْبَخِيلُ:نَعَمْ.قَالَكَبِيرُالْقُضَاةِ:هَلْكَانَالْحِصَانُصَدِيقَكَ؟اَجَابَالشَّيْخُ:نَعَمْ.قَالَكَبِيرُالْقُضَاةِ:
+هَلْطَرَدْتَالْحِصَانَمِنْبَيْتِكَ؟قَالالشَّيُخُ:نَعَمْ.اَنَااُنْفِقُعَلَيْهِالـْكَثِيرَمِنَالْمَالِ.اِجْتَمَعَالْقُضَاةُ.تَكَلَّمَالْقُضَاةُ
+كَلَامًاكَثِيرًا.قَالَكَبِيرُالْقُضَاةِ:سَوْفَنُحْضَرُرَجُلًا.سَوْفَيَهْتَمُّهَذَالارَّجُلُبِالْحِصَانِ.سَوْفَنَاْخُذُنِصْفَ
+مَالِكَ.سَوْفَيَشْتَرِيالرَّجُلُبِالْمَالِطَعَامًا،وَشَرَابًا،وَبَيْتًالِلْحِصَانِ</p>
+    <form>
+      <p><strong>Question:</strong>عَكْسُ كَلِمَةِ (اِشْتَرَى) ......................</p>
+      <label><input type="radio" name="answer" value="a">رَأَى</label><br>
+      <label><input type="radio" name="answer" value="b"> بَاعَ</label><br>
+      <label><input type="radio" name="answer" value="c"> أَشَارَ</label><br>
+
+      <br>
+
+    </form>
+    <script>
+      const form = document.querySelector('form');
+      const correctAnswer = 'b';
+      const labels = form.querySelectorAll('label');
+      labels.forEach(label => {
+        const input = label.querySelector('input');
+        input.addEventListener('change', (event) => {
+          const selectedAnswer = event.target.value;
+          if (selectedAnswer === correctAnswer) {
+            label.classList.add('correct-answer');
+          } else {
+            label.classList.remove('correct-answer');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
