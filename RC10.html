@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+  <head>
+    <title>Reading Comprehension Test</title>
+    <style>
+      .correct-answer::after {
+        content: "\2713";
+        color: green;
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Reading Comprehension Test</h1>
+    <p>Read the following paragraph and answer the multiple-choice question below:</p>
+    <p><strong>Paragraph:</strong>
+
+.اَجَابَصَالِحٌ:إِنَّهَذَالاْبَلَدَعَجِيبٌ.تَسْتَطِيعُالْفِئْرَانُاَنْتَاْكُلَالْحَدِيدَ.وَيَسْتَطِيعُالصَّقْرُاَنْيَخْطِفَوَلَدًاسَمِينًا
+سَاَلَالْقَاضِيصَالِحًا:مَاذَاتَقْصِدُ؟حَكَىصَالِحٌالقِصَّةَلِلْقَاضِي.ضَحِكَالْقَاضِيكَثِيرًا.قَالَالْقَاضِي:لَقَدْكَذَبْتَ
+يَاإِسْحَاقُ.كَانَتْالـْكِذْبَةُغَبِيَّةً.اَنْتَتَسْتَحِقُّالَّذِيحَصَلَ.سَوْفَيَبْقَىاِبْنُكَعِنْدَصَالِحٍحَتَّىيَعُودَالْمِيزَانُ.نَدِمَ
+إِسْحَاقُعَلَىمَافَعَلَ.عَادَإِسْحَاقُإِلَىالْبَيْتِ.دَخَلَإِسْحَاقُإِلَىالْمَخْزَنِ.نَظَرَإِسْحَاقُإِلَىالْمِيزَانِالثَّمِينِ.حَمَلَإِسْحَاقُ
+الْمِيزَانَ.عَادَإِسْحَاقُإِلَىالْقَاضِي.اَعْطَىإِسْحَاقُالْمِيزَانَلِلْقَاضِي.ذَهَبَصَالِحٌإِلَىالْوَلَدِ.اَخَذَصَالِحٌالْوَلَدَ.ذَهَبَ
+صَالِحٌإِلَىالْقَاضِي.اَخَذَصَالِحٌالْمِيزَانَ.عَادَصَالِحٌإِلىدُكَّانِهِالْقَدِيمِ.عَمِلَصَالِحٌفِيالدُّكَّانِ.اَصْبَحَصَالِحٌتَاجِرًا
+غَنِيًّا.
+    </p>
+
+  <form id="form1">
+  <p><strong>Question:</strong>
+خَبَّأَ إِسْحَاقُ الْمِيزَانَ فِي ......................ِ</p>
+  <label><input type="radio" name="answer" value="a">
+
+
+الدُّكَّانِ</label><br>
+  <label><input type="radio" name="answer" value="b"> الْغُرْفَةِ</label><br>
+  <label><input type="radio" name="answer" value="c"> الْمَخْزَنِ</label><br>
+  <br>
+</form>
+
+<script>
+  const form1 = document.querySelector('#form1');
+  const correctAnswer1 = 'c';
+  const labels1 = form1.querySelectorAll('label');
+  labels1.forEach(label => {
+    const input = label.querySelector('input');
+    input.addEventListener('change', (event) => {
+      const selectedAnswer = event.target.value;
+      if (selectedAnswer === correctAnswer1) {
+        label.classList.add('correct-answer');
+      } else {
+        label.classList.remove('correct-answer');
+      }
+    });
+  });
+</script>
+
+<form id="form2">
+  <p><strong>Question:</strong>
+
+عَكْسُ كَلِمَةِ (الْكَذِب) ......................</p>
+  <label><input type="radio" name="answer" value="a">
+الْأَمَانَة</label><br>
+  <label><input type="radio" name="answer" value="b"> الصِّدْق</label><br>
+  <label><input type="radio" name="answer" value="c"> الْعَهْد</label><br>
+  <br>
+</form>
+
+<script>
+  const form2 = document.querySelector('#form2');
+  const correctAnswer2 = 'b';
+  const labels2 = form2.querySelectorAll('label');
+  labels2.forEach(label => {
+    const input = label.querySelector('input');
+    input.addEventListener('change', (event) => {
+      const selectedAnswer = event.target.value;
+      if (selectedAnswer === correctAnswer2) {
+        label.classList.add('correct-answer');
+      } else {
+        label.classList.remove('correct-answer');
+      }
+    });
+  });
+</script>
+
+
+
