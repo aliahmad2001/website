@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+  <head>
+    <title>Reading Comprehension Test</title>
+    <style>
+      .correct-answer::after {
+        content: "\2713";
+        color: green;
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Reading Comprehension Test</h1>
+    <p>Read the following paragraph and answer the multiple-choice question below:</p>
+    <p><strong>Paragraph:</strong>
+
+صَاحَسَمِيْرٌ:إِنَّنَانُرِيدُحَكَمًا.اُحْكُمْبَيْنَنَايَاعَمُّ!ضَحِكَجُحَا،وَقَالَ:سَوْفَاَحْكُمُبِالْعَدْلِ!قَالَجُحَا:اَيْنَالْقِسْمَانِ؟
+اَعْطَىالْوَلَدَانِالْقِسْمَيْنِلِجُحَا.نَظَرَجُحَاإِلَىالْقِسْمَيْنِجَيِّدًا.كَانَقِسْمُمَرْوَانَاَكْبَرَمِنْقِسْمِسَمِيْرٍ.قَالَجُحَا:الْقِسْمَانِ
+مُتَسَاوْيَانِيَاسَمِيرُ!اَعْطَىجُحَاسَمِيرًالاْقِسْمَالْاَكْبَرَ.صَاحَمَرْوَانُ:لَايَاعَمُّ!لَنْيَاخُذَسَمِيْرٌقِسْمِي!اِبْتَسَمَجُحَا
+وَقَالَ:إِنْالْقِسْمَيْنِغَيْرُمُتَسَاوِيَيْنِيَاسَمِيرُ!صَاحَسَمِيْرٌ:نَعَمْ،لَقَدْعَرَفْتُ!اَنْتَمُخَادِعٌيَامَرْوَانُ!قَالَجُحَا،وَهُوَ
+يَضَعُيَدَهُعَلَىكَتِفِسَمِيْرٍ:لَاتَغْضَبْيَابُنَيَّ.سَوْفَآكُلُمِنْقِسْمِمَرْوَانَ؛كَييَتَسَاوَىالْقِسْمَانِ.
+    </p>
+
+  <form id="form1">
+  <p><strong>Question:</strong>عَكْسُ كَلِمَةِ (أَعْطَى) ......................</p>
+  <label><input type="radio" name="answer" value="a">
+
+أَعَادَ</label><br>
+  <label><input type="radio" name="answer" value="b"> أَطَاعَ</label><br>
+  <label><input type="radio" name="answer" value="c"> أَخَذَ</label><br>
+  <br>
+</form>
+
+<script>
+  const form1 = document.querySelector('#form1');
+  const correctAnswer1 = 'c';
+  const labels1 = form1.querySelectorAll('label');
+  labels1.forEach(label => {
+    const input = label.querySelector('input');
+    input.addEventListener('change', (event) => {
+      const selectedAnswer = event.target.value;
+      if (selectedAnswer === correctAnswer1) {
+        label.classList.add('correct-answer');
+      } else {
+        label.classList.remove('correct-answer');
+      }
+    });
+  });
+</script>
+

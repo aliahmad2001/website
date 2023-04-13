@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Upload Passage</title>
+    <style>
+      #big-box {
+        width: 1000px;
+        height: 500px;
+        padding: 10px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Upload your passage here to get your questions generated</h1>
+    <div id="big-box" contenteditable="true">
+      <p>Start your passage here:</p>
+    </div>
+
+    <label for="question-type">Provide the number of questions to be generated</label>
+  <select id="question-type" name="question-type">
+  <option value="--select">--select--</option>
+    <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+    <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+
+    <br><br><br>
+    <div style="text-align: left;">
+  <button id="generate-btn" type="button" style="font-size: 24px; padding: 12px 24px;" disabled>Generate Questions</button>
+  </div>
+
+  <script>
+  const dropdown = document.getElementById("question-type");
+  const button = document.getElementById("generate-btn");
+
+  dropdown.addEventListener("change", () => {
+    if (dropdown.value) {
+      button.removeAttribute("disabled");
+    } else {
+      button.setAttribute("disabled", "");
+    }
+  });
+</script>
+
+
+  </body>
+</html>
